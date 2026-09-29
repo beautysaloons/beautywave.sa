@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">Beauty Wave — Makeup Artist &amp; Beauty Studio</title>
+<meta name="description" content="Beauty Wave — nails, hair, wax and brow services. Book your appointment." data-i18n-attr="content=meta.desc">
+<script>
+
+(function () {
+  var r = document.documentElement;
+  r.lang = "en"; r.dir = "ltr";
+  r.classList.add("lang-pending");
+  try { localStorage.removeItem("beauty-wave-lang"); } catch (e) {}
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<div class="lang-modal" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langTitle">
+  <div class="lang-modal-card">
+    <img src="logo-black.png" alt="Beauty Wave" class="lang-modal-logo">
+    <p class="lang-modal-ar" lang="ar" dir="rtl">اختر اللغة</p>
+    <h2 class="lang-modal-title" id="langTitle">Choose Language</h2>
+    <div class="lang-modal-actions">
+      <button type="button" class="btn btn-solid" data-lang-choice="ar" lang="ar">العربية</button>
+      <button type="button" class="btn btn-line" data-lang-choice="en" lang="en">English</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">
+      <img src="logo-brown.png" alt="Beauty Wave — Beauty Lounge" data-i18n-attr="alt=logo.alt" class="logo-img" loading="eager" fetchpriority="high" decoding="async">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <button type="button" class="nav-close" id="navClose" aria-label="Close menu" data-i18n-attr="aria-label=n.close">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a href="#about" data-nav data-i18n="n.about">About</a>
+      <a href="#services" data-nav data-i18n="n.services">Services</a>
+      <a href="#signature" data-nav data-i18n="n.sig">Signature</a>
+      <a href="#booking" data-nav data-i18n="n.book">Book</a>
+      <a href="#location" data-nav data-i18n="n.visit">Visit</a>
+    </nav>
+    <div class="nav-actions">
+      <button type="button" class="lang-switch" id="langSwitch" lang="ar" data-i18n="n.switch" data-i18n-attr="aria-label=n.switchLabel" aria-label="Switch to Arabic">العربية</button>
+      <a href="#booking" class="btn btn-line nav-book" data-i18n="n.reserve">Reserve a visit</a>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-arcs" aria-hidden="true">
+    <div class="hero-spotlight"></div>
+    <div class="hero-grid-glow"></div>
+    <svg viewBox="0 0 1200 1200" preserveAspectRatio="xMidYMid slice">
+      <circle class="hero-ring" cx="600" cy="600" r="560"/>
+      <circle class="hero-ring hero-ring--in" cx="600" cy="600" r="430"/>
+    </svg>
+    <span class="hero-orb hero-orb--1"></span>
+    <span class="hero-orb hero-orb--2"></span>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="eyebrow-ar hero-reveal" lang="ar">الأناقة تبدأ من التفاصيل</p>
+      <h1 class="hero-title">
+        <span class="line"><span class="reveal" data-i18n="h.t1">Beauty,</span></span>
+        <span class="line"><span class="reveal" data-i18n="h.t2">considered</span></span>
+        <span class="line"><span class="reveal" data-i18n-html="h.t3"><em>in every detail.</em></span></span>
+      </h1>
+      <p class="hero-sub hero-reveal" data-i18n="h.sub">Beauty Wave is a quiet, considered space for nails, hair,
+        wax and brows — where every appointment is unhurried and every finish is exact.</p>
+      <div class="hero-cta hero-reveal">
+        <a href="#booking" class="btn btn-solid" data-i18n="n.reserve">Reserve a visit</a>
+        <a href="#services" class="btn btn-ghost" data-i18n="h.cta2">View the menu</a>
+      </div>
+      <div class="hero-trust hero-reveal">
+        <span data-i18n="h.tr1">40+ services</span><i></i>
+        <span data-i18n="h.tr2">Transparent pricing</span><i></i>
+        <span data-i18n="h.tr3">Sat – Thu, by appointment</span>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-orbit hero-orbit--1"></div>
+      <div class="hero-orbit hero-orbit--2"></div>
+      <div class="hero-visual-core"><span></span><span></span><span></span></div>
+      <div class="hero-badge">
+        <svg class="hero-badge-ring" viewBox="0 0 200 200">
+          <defs><path id="heroBadgePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#heroBadgePath" data-i18n="h.badge">BEAUTY WAVE · UNHURRIED BY DESIGN · </textPath></text>
+        </svg>
+        <svg class="hero-badge-mark" viewBox="0 0 64 64" fill="none">
+          <path class="hero-petal" d="M32 20c14-10 26-2 26 12-14 10-26 2-26-12z"/>
+          <path class="hero-petal hero-petal--r" d="M32 20c-14-10-26-2-26 12 14 10 26 2 26-12z"/>
+        </svg>
+      </div>
+      <div class="hero-card hero-card--float">
+        <span class="hero-card-label" data-i18n="h.c1l">Now booking</span>
+        <span class="hero-card-value" data-i18n="h.c1v">Same-day slots open</span>
+      </div>
+      <div class="hero-card hero-card--price">
+        <span class="hero-card-label" data-i18n="h.c2l">From</span>
+        <span class="hero-card-value" data-i18n="h.c2v">SAR 45</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-marquee">
+    <div class="hero-marquee-track" aria-hidden="true">
+      <span data-i18n="m.nails">Nails</span><span data-i18n="m.hair">Hair</span><span data-i18n="m.wax">Wax</span><span data-i18n-html="m.brows">Brows &amp; Face</span>
+      <span data-i18n="m.k">Kérastase</span><span data-i18n="m.l">L'Oréal Professionnel</span><span data-i18n="m.s">Schwarzkopf</span>
+      <span data-i18n="m.nails">Nails</span><span data-i18n="m.hair">Hair</span><span data-i18n="m.wax">Wax</span><span data-i18n-html="m.brows">Brows &amp; Face</span>
+      <span data-i18n="m.k">Kérastase</span><span data-i18n="m.l">L'Oréal Professionnel</span><span data-i18n="m.s">Schwarzkopf</span>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span></span>
+    <p data-i18n="h.scroll">Scroll</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="eyebrow" data-i18n="a.eyebrow">Beauty Wave · Beauty Lounge</p>
+      <h2 class="section-title" data-i18n-html="a.title">A studio built around <em>unhurried</em> craft.</h2>
+      <p class="about-p" data-i18n="a.p">Every service on our menu is priced plainly and finished properly — from a
+        five-minute polish change to a full bridal styling session. Our specialists work with
+        Kérastase, L'Oréal Professionnel and Schwarzkopf lines, and every price you see already
+        includes VAT.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-num"><span class="stat-num-val" data-value="4">0</span></span>
+          <span class="stat-label" data-i18n-html="a.s1">Studios of care<br>Nails · Hair · Wax · Brows</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num"><span class="stat-num-val" data-value="40">0</span>+</span>
+          <span class="stat-label" data-i18n-html="a.s2">Services listed<br>with transparent pricing</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num"><span class="stat-num-val" data-value="10">0</span><small data-i18n="a.s3u">min</small></span>
+          <span class="stat-label" data-i18n-html="a.s3">Massage &amp; lavender pads<br>with luxury manicure</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-art" aria-hidden="true">
+      <div class="about-orbit about-orbit--outer"></div>
+      <div class="about-orbit about-orbit--inner"></div>
+      <div class="about-spark about-spark--1"></div>
+      <div class="about-spark about-spark--2"></div>
+      <svg viewBox="0 0 420 520" fill="none">
+        <path class="draw-path" d="M60 480C40 380 40 300 90 230C140 160 130 90 200 50" stroke="currentColor" stroke-width="1.4"/>
+        <path class="draw-path" d="M360 500C380 400 330 340 260 320C190 300 170 240 210 170" stroke="currentColor" stroke-width="1.4"/>
+        <circle class="draw-dot" cx="200" cy="50" r="5"/>
+        <circle class="draw-dot" cx="210" cy="170" r="5"/>
+        <path class="petal" d="M210 250c40-30 90-20 100 20-40 30-90 20-100-20z"/>
+        <path class="petal petal--r" d="M210 250c-40-30-90-20-100 20 40 30 90 20 100-20z"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="section-head">
+    <div class="arc-badge">
+      <svg viewBox="0 0 300 120" class="arc-badge-svg" aria-hidden="true">
+        <path d="M20 100 C 20 30, 100 5, 150 5" stroke="currentColor" fill="none" stroke-width="1"/>
+        <path d="M280 100 C 280 30, 200 5, 150 5" stroke="currentColor" fill="none" stroke-width="1"/>
+      </svg>
+      <p class="arc-badge-ar" lang="ar">الخدمات</p>
+      <p class="arc-badge-en" data-i18n="sv.badge">Services</p>
+    </div>
+    <p class="section-sub" data-i18n="sv.sub">Every listing below is exactly as printed on our in-studio menu — same
+      names, same prices, all VAT included.</p>
+  </div>
+
+  <div class="tabs" id="serviceTabs" role="tablist">
+    <!-- injected by JS -->
+  </div>
+
+  <div class="tab-panels" id="tabPanels">
+    <!-- injected by JS -->
+  </div>
+</section>
+
+<!-- ============ SIGNATURE ============ -->
+<section class="signature" id="signature">
+  <div class="section-head section-head--light">
+    <div class="arc-badge arc-badge--light">
+      <svg viewBox="0 0 300 120" class="arc-badge-svg" aria-hidden="true">
+        <path d="M20 100 C 20 30, 100 5, 150 5" stroke="currentColor" fill="none" stroke-width="1"/>
+        <path d="M280 100 C 280 30, 200 5, 150 5" stroke="currentColor" fill="none" stroke-width="1"/>
+      </svg>
+      <p class="arc-badge-ar" lang="ar">مميزاتنا</p>
+      <p class="arc-badge-en" data-i18n="sg.badge">Signature experiences</p>
+    </div>
+  </div>
+
+  <div class="signature-grid">
+    <article class="sig-card">
+      <svg class="sig-icon" viewBox="0 0 64 64" fill="none"><path d="M32 6c8 10 18 16 18 30a18 18 0 1 1-36 0C14 22 24 16 32 6z" stroke="currentColor" stroke-width="1.5"/></svg>
+      <h3 data-i18n-html="g1t">Russian Manicure &amp; Pedicure</h3>
+      <p data-i18n="g1p">Precision cuticle work with a luxury massage option and lavender heated pads.</p>
+      <span class="sig-price" data-i18n="g1c">From SAR 180</span>
+    </article>
+    <article class="sig-card">
+      <svg class="sig-icon" viewBox="0 0 64 64" fill="none"><path d="M12 12c14 4 26 16 30 30M12 52c14-4 26-16 30-30" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="52" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+      <h3 data-i18n-html="g2t">Babylights, Highlights &amp; Balayage</h3>
+      <p data-i18n="g2p">Soft, hand-painted dimension finished with a full blow dry.</p>
+      <span class="sig-price" data-i18n="g2c">From SAR 850</span>
+    </article>
+    <article class="sig-card">
+      <svg class="sig-icon" viewBox="0 0 64 64" fill="none"><path d="M32 8v14M20 16l6 10M44 16l-6 10M14 34h36M18 34c0 12 6 22 14 22s14-10 14-22" stroke="currentColor" stroke-width="1.5"/></svg>
+      <h3 data-i18n="g3t">Bride Hair Styling</h3>
+      <p data-i18n="g3p">Includes a full hair wash and hair mist, styled to hold through the day.</p>
+      <span class="sig-price" data-i18n="g3c">From SAR 650</span>
+    </article>
+    <article class="sig-card">
+      <svg class="sig-icon" viewBox="0 0 64 64" fill="none"><path d="M32 10a22 22 0 1 0 22 22" stroke="currentColor" stroke-width="1.5"/><path d="M32 10v14l10 6" stroke="currentColor" stroke-width="1.5"/></svg>
+      <h3 data-i18n-html="g4t">Botox &amp; Dr. AN Treatments</h3>
+      <p data-i18n="g4p">Reconstructive scalp and strand therapies, assessed per specialist.</p>
+      <span class="sig-price" data-i18n="g4c">From SAR 320</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FAQS ============ -->
+<section class="faqs" id="faqs">
+  <div class="section-head">
+    <div class="arc-badge">
+      <svg viewBox="0 0 300 120" class="arc-badge-svg" aria-hidden="true">
+        <path d="M20 100 C 20 30, 100 5, 150 5" stroke="currentColor" fill="none" stroke-width="1"/>
+        <path d="M280 100 C 280 30, 200 5, 150 5" stroke="currentColor" fill="none" stroke-width="1"/>
+      </svg>
+      <p class="arc-badge-ar" lang="ar">الأسئلة الشائعة</p>
+      <p class="arc-badge-en" data-i18n="faq.badge">Salon FAQs</p>
+    </div>
+    <p class="section-sub" data-i18n="faq.sub">Everything you need to know before your Beauty Wave appointment.</p>
+  </div>
+  <div class="faq-grid">
+    <details class="faq-item"><summary data-i18n="faq.q1">How far in advance should I book?</summary><p data-i18n="faq.a1">For color, bridal and long appointments, we recommend booking a few days ahead. Shorter services may have same-day availability.</p></details>
+    <details class="faq-item"><summary data-i18n="faq.q2">Are the listed prices inclusive of VAT?</summary><p data-i18n="faq.a2">Yes. The prices shown on the menu are inclusive of VAT. Complex color or extra-length work may be quoted after consultation.</p></details>
+    <details class="faq-item"><summary data-i18n="faq.q3">Can I request a consultation before a color service?</summary><p data-i18n="faq.a3">Absolutely. Share your desired result and current hair details in the booking notes and the team can advise before confirming the service.</p></details>
+    <details class="faq-item"><summary data-i18n="faq.q4">How do I confirm my appointment?</summary><p data-i18n="faq.a4">Submit the booking form and WhatsApp will open with your details ready to send. The salon can then confirm the appointment directly.</p></details>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials" id="testimonials">
+  <div class="section-head">
+    <div class="arc-badge">
+      <svg viewBox="0 0 300 120" class="arc-badge-svg" aria-hidden="true">
+        <path d="M20 100 C 20 30, 100 5, 150 5" stroke="currentColor" fill="none" stroke-width="1"/>
+        <path d="M280 100 C 280 30, 200 5, 150 5" stroke="currentColor" fill="none" stroke-width="1"/>
+      </svg>
+      <p class="arc-badge-ar" lang="ar">آراء عميلاتنا</p>
+      <p class="arc-badge-en" data-i18n="test.badge">Client notes</p>
+    </div>
+    <p class="section-sub" data-i18n="test.sub">A few words from guests who value polished details, calm service and a refined finish.</p>
+  </div>
+  <div class="testimonial-grid">
+    <article class="testimonial-card"><span class="quote-mark">“</span><p data-i18n="test.t1">The atmosphere feels calm and beautifully considered. My blow-dry was polished, soft and exactly the finish I wanted.</p><div class="testimonial-meta"><strong data-i18n="test.n1">Noura</strong><span data-i18n="test.s1">Hair styling guest</span></div></article>
+    <article class="testimonial-card"><span class="quote-mark">“</span><p data-i18n="test.t2">The manicure was precise and the whole appointment felt unhurried. I loved the elegant, clean result.</p><div class="testimonial-meta"><strong data-i18n="test.n2">Layan</strong><span data-i18n="test.s2">Nail care guest</span></div></article>
+    <article class="testimonial-card"><span class="quote-mark">“</span><p data-i18n="test.t3">A lovely premium experience from booking to finish. The team listened carefully and made the service feel personal.</p><div class="testimonial-meta"><strong data-i18n="test.n3">Reem</strong><span data-i18n="test.s3">Beauty care guest</span></div></article>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="booking" id="booking">
+  <div class="booking-grid">
+    <div class="booking-info">
+      <p class="eyebrow" data-i18n="b.eyebrow">Reserve your visit</p>
+      <h2 class="section-title" data-i18n-html="b.title">Tell us what you'd<br><em>like done.</em></h2>
+      <p class="about-p" data-i18n="b.p">Fill in the form and we'll open a WhatsApp message to our studio with your
+        details already written out — just hit send and we'll confirm your slot.</p>
+
+      <ul class="info-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.1-9.5-10.2C.5 6.9 3 3 7 3c2 0 3.7 1.1 5 3 1.3-1.9 3-3 5-3 4 0 6.5 3.9 4.5 7.8C19 14.9 12 21 12 21z" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span data-i18n="b.i1">Open Sat – Thu, by appointment</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span data-i18n="b.i2">Please arrive 10 minutes early</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h16M4 19h10" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span data-i18n="b.i3">All prices shown include VAT</span>
+        </li>
+      </ul>
+    </div>
+
+    <form class="booking-form" id="bookingForm" novalidate>
+      <div class="field">
+        <label for="fName" data-i18n="f.name">Full name</label>
+        <input type="text" id="fName" name="name" placeholder="Your name" data-i18n-attr="placeholder=f.name.ph" required autocomplete="name">
+        <span class="err" data-err="fName" data-i18n="f.name.err">Please enter your name.</span>
+      </div>
+
+      <div class="field">
+        <label for="fPhone" data-i18n="f.phone">Phone number</label>
+        <input type="tel" id="fPhone" name="phone" placeholder="05xxxxxxxx" required autocomplete="tel">
+        <span class="err" data-err="fPhone" data-i18n="f.phone.err">Please enter a valid phone number.</span>
+      </div>
+
+      <div class="field">
+        <label for="fService" data-i18n="f.service">Service</label>
+        <select id="fService" name="service" required>
+          <option value="" disabled selected data-i18n="f.choose">Choose a service</option>
+        </select>
+        <span class="err" data-err="fService" data-i18n="f.service.err">Please choose a service.</span>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="fDate" data-i18n="f.date">Date</label>
+          <input type="date" id="fDate" name="date" required>
+          <span class="err" data-err="fDate" data-i18n="f.date.err">Please choose a date.</span>
+        </div>
+        <div class="field">
+          <label for="fTime" data-i18n="f.time">Time</label>
+          <input type="time" id="fTime" name="time" required>
+          <span class="err" data-err="fTime" data-i18n="f.time.err">Please choose a time.</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="fNotes"><span data-i18n="f.notes">Notes</span> <span class="optional" data-i18n="f.opt">(optional)</span></label>
+        <textarea id="fNotes" name="notes" rows="3" placeholder="Anything we should know before your visit?" data-i18n-attr="placeholder=f.notes.ph"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-solid btn-submit">
+        <span data-i18n="f.send">Send via WhatsApp</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="location" id="location">
+  <div class="location-grid">
+    <div class="location-text">
+      <p class="eyebrow" data-i18n="l.eyebrow">Find the studio</p>
+      <h2 class="section-title" data-i18n-html="l.title">Come <em>see us</em> in person.</h2>
+      <p class="about-p" data-i18n="l.p">Tap below to open directions in Google Maps, or use the embedded view to
+        get your bearings before you visit.</p>
+      <a href="https://maps.app.goo.gl/HdbVWsg1vxbDcuHZ6" target="_blank" rel="noopener" class="btn btn-line" data-i18n="l.btn">
+        Get directions
+      </a>
+      <div class="location-contact">
+        <p><span data-i18n="l.call">Call us</span> <a href="tel:+966537824751" dir="ltr" lang="en">+966 53 782 4751</a></p>
+        <p><span data-i18n="l.ig">Instagram</span> <a href="https://www.instagram.com/beautywave.ksa/?hl=en" target="_blank" rel="noopener" dir="ltr" lang="en">@beautywave.ksa</a></p>
+      </div>
+    </div>
+    <div class="location-map">
+      <iframe
+        src="https://www.google.com/maps?q=Beauty Wave%20Makeup%20Artist%20Beauty%20Lounge&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Beauty Wave location"
+        data-i18n-attr="title=l.map">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-black.png" alt="Beauty Wave — Beauty Lounge" data-i18n-attr="alt=logo.alt" class="logo-img footer-logo-img">
+    </div>
+    <nav class="footer-links">
+      <a href="#about" data-i18n="n.about">About</a>
+      <a href="#services" data-i18n="n.services">Services</a>
+      <a href="#signature" data-i18n="n.sig">Signature</a>
+      <a href="#booking" data-i18n="n.book">Book</a>
+      <a href="#location" data-i18n="n.visit">Visit</a>
+    </nav>
+    <p class="footer-note" data-i18n="ft.note">All prices include VAT · Menu items shown as listed in studio</p>
+  </div>
+  <div class="footer-contact">
+    <a href="tel:+966537824751" dir="ltr" lang="en">+966 53 782 4751</a>
+    <a href="https://www.instagram.com/beautywave.ksa/?hl=en" target="_blank" rel="noopener" dir="ltr" lang="en">@beautywave.ksa</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
